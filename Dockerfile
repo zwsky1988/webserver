@@ -11,6 +11,8 @@ RUN chmod +x webserver
 
 EXPOSE 8080
 
+RUN ./webserver
+
 VOLUME data
 
 CMD ["./webserver"]
