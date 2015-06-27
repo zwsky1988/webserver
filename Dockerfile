@@ -1,7 +1,7 @@
 FROM ubuntu:14.04
 
 RUN apt-get update \
-	&& apt-get install -y wget sysstat traceroute && wget -qO- https://get.docker.com/ | sh && apt-get -y install lxc-docker-1.6.0
+	&& apt-get install -y curl sysstat traceroute && curl -sSL https://get.daocloud.io/docker | sh && apt-get install -y lxc-docker-1.6.0
 
 WORKDIR /
 
