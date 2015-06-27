@@ -1,7 +1,7 @@
 FROM ubuntu:14.04
 
 RUN apt-get update \
-	&& apt-get install -y sysstat traceroute
+	&& apt-get install -y wget sysstat traceroute && wget -qO- https://get.docker.com/ | sh && apt-get -y install lxc-docker-1.6.0
 
 WORKDIR /
 
